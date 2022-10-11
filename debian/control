@@ -1,0 +1,28 @@
+Source: libref-util-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper (>= 10)
+Build-Depends-Indep: libreadonly-perl,
+                     libref-util-xs-perl,
+                     perl
+Standards-Version: 4.1.4
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libref-util-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libref-util-perl.git
+Homepage: https://metacpan.org/release/Ref-Util
+
+Package: libref-util-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends}
+Recommends: libreadonly-perl,
+            libref-util-xs-perl
+Description: set of utility functions for checking references
+ Ref::Util introduces several functions to help identify references in a
+ faster and smarter way. In short:
+ .
+  ref $foo eq 'ARRAY'
+  # is now:
+  is_arrayref($foo)
